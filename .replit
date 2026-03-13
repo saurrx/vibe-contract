@@ -1,0 +1,16 @@
+run = "cd frontend && npm run dev"
+entrypoint = "frontend/src/app/page.tsx"
+
+[env]
+SOLANA_CLUSTER = "devnet"
+PATH = "${HOME}/.cargo/bin:${HOME}/.local/share/solana/install/active_release/bin:${HOME}/.avm/bin:${PATH}"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "cd frontend && npm run build && npm run start"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80

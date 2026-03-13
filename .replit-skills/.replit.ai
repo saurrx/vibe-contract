@@ -1,0 +1,32 @@
+# Vibe Contract — AI Hints for Replit
+
+## Project Overview
+Vibe Contract is a Replit-ready Solana smart contract factory for hackathon participants.
+Users pick a template, optionally customize with AI, build, deploy, and get outputs.
+
+## Tech Stack
+- Anchor 0.31.1 (Rust) for smart contracts
+- Next.js 14 + Tailwind + shadcn/ui for the frontend
+- Solana devnet only
+
+## Key Paths
+- `programs/active-program/src/lib.rs` — the active smart contract
+- `templates/` — six template contracts (escrow, voting, tipping, registry, coinflip, blank)
+- `frontend/` — Next.js app (run with `npm run dev`)
+- `scripts/build.sh` — builds the contract
+- `scripts/deploy.sh` — deploys to devnet
+- `deployer-keypair.json` — devnet wallet
+- `output/` — build artifacts (IDL, program ID, client snippet)
+
+## Code Style
+- ALL code must be heavily commented in plain English
+- Customization points marked with `// CUSTOMIZE:`
+- Extension points marked with `// EXTEND:`
+
+## Skills Reference
+See `.replit-skills/` for Solana/Anchor development guides:
+- `SKILL.md` — overview and operating procedure
+- `programs-anchor.md` — Anchor patterns and macros
+- `idl-codegen.md` — IDL and client generation
+- `common-errors.md` — error diagnosis and fixes
+- `compatibility-matrix.md` — version pinning
